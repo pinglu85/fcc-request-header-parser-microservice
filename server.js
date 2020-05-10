@@ -28,7 +28,6 @@ app.set('trust proxy', true);
 
 // request header parser API endpoint
 app.get('/api/whoami', (req, res) => {
-  console.log(req.headers);
   res.json({
     ipaddress: req.ip,
     language: req.headers['accept-language'],
