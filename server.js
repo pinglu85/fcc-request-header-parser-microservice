@@ -23,7 +23,9 @@ app.get('/api/hello', function (req, res) {
   res.json({ greeting: 'hello API' });
 });
 
+// ignore the proxy's IP address
 app.set('trust proxy', true);
+
 // request header parser API endpoint
 app.get('/api/whoami', (req, res) => {
   console.log(req.headers);
